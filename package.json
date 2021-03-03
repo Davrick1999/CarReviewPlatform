@@ -1,6 +1,7 @@
 {
   "name": "react-car-review-platform",
   "version": "0.1.0",
+  
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -12,6 +13,7 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.0"
   },
+  "git.terminalAuthentication": false,  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
