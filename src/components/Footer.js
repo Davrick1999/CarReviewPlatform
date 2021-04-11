@@ -20,8 +20,11 @@ function Footer() {
               name="email"
               type="email"
               placeholder="Your Email"
+              required
             />
-            <Button buttonStyle="btn-outline">Subscribe</Button>
+            <Button type="submit" buttonStyle="btn-outline">
+              Subscribe
+            </Button>
           </form>
         </div>
       </section>
@@ -29,11 +32,10 @@ function Footer() {
         <div className="footer-link-wrapper">
           <div class="footer-link-items">
             <h2>About Us</h2>
-            <Link to="/sign-up">How it works</Link>
-            <Link to="/">Testimonials</Link>
-            <Link to="/">Careers</Link>
-            <Link to="/">Investors</Link>
-            <Link to="/">Terms of Service</Link>
+            <Link to="/services">How it works</Link>
+            <Link to="/services">Testimonials</Link>
+            <Link to="/services">Careers</Link>
+            <Link to="/services">Investors</Link>
           </div>
           <div class="footer-link-items">
             <h2>Contact Us</h2>
@@ -63,12 +65,11 @@ function Footer() {
       <section class="social-media">
         <div class="social-media-wrap">
           <div class="footer-logo">
-            <Link to="/" className="social-logo">
-              CRP
-              <i class="fab fa-typo3" />
-            </Link>
+            <a href="#hero" className="social-logo">
+              CPR
+            </a>
           </div>
-          <small class="website-rights">TRVL © 2021</small>
+          <small class="website-rights">CRP © 2021</small>
           <div class="social-icons">
             <Link
               class="social-icon-link facebook"

@@ -1,19 +1,22 @@
 :root {
-  --primary: #fff;
+  --primary: #eee;
+  --mainColor: #403f4c;
 }
 
 .btn {
   padding: 8px 20px;
-  border-radius: 2px;
+  border-radius: 5px;
   outline: none;
   border: none;
   cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 
 .btn-primary {
-  background-color: var(--primary);
-  color: #242424;
-  border: 1px solid var(--primary);
+  background-color: var(--mainColor);
+  color: #fff;
+  border: 1px solid var(--mainColor);
 }
 
 .btn-outline {
@@ -21,6 +24,7 @@
   color: #fff;
   padding: 8px 20px;
   border: 1px solid var(--primary);
+  border-radius: 5px;
   transition: all 0.3s ease-out;
 }
 

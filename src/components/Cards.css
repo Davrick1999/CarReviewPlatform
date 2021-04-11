@@ -1,6 +1,6 @@
 .cards {
   padding: 4rem;
-  background: #fff;
+  background: #eee;
 }
 
 h1 {
@@ -36,9 +36,8 @@ h1 {
   display: flex;
   flex-flow: column;
   width: 100%;
-  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
-  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  box-shadow: 0 6px 20px rgba(64, 63, 76, 0.21);
+
   border-radius: 10px;
   overflow: hidden;
   text-decoration: none;
@@ -61,13 +60,15 @@ h1 {
   position: absolute;
   bottom: 0;
   margin-left: 10px;
-  padding: 6px 8px;
+  padding: 6px 14px;
   max-width: calc((100%) - 60px);
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 600;
   color: #fff;
-  background-color: #e57830;
+  background-color: #347fc4;
   box-sizing: border-box;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .cards__item__img {
@@ -82,7 +83,7 @@ h1 {
   height: 100%;
   max-height: 100%;
   object-fit: cover;
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
 }
 
 .cards__item__img:hover {
@@ -94,9 +95,8 @@ h1 {
 }
 
 .cards__item__text {
-  color: #252e48;
+  color: #333;
   font-size: 18px;
-  line-height: 24px;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -114,5 +114,8 @@ h1 {
 @media only screen and (max-width: 1024px) {
   .cards__item {
     margin-bottom: 2rem;
+  }
+  .cards {
+    padding: 3rem;
   }
 }

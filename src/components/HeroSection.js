@@ -1,31 +1,21 @@
 import React from "react";
 import "../App.css";
-import { Button } from "./Button";
 import "./HeroSection.css";
+import specs from "./specs";
 
 function HeroSection() {
-  return (
-    <div className="hero-container">
-      <h1>Car Review Platform</h1>
-      <p>Review your favorite cars</p>
-      <div className="hero-btns">
-        <Button
-          className="btns"
-          buttonStyle="btn-outline"
-          buttonSize="btn-large"
-        >
-          GET STARTED
-        </Button>
-        <Button
-          className="btns"
-          buttonStyle="btn-primary"
-          buttonSize="btn-large"
-        >
-          WATCH TRAILER
-        </Button>
+  const carSpecs = specs.map((spec, index) => {
+    return (
+      <div key={index} className="bg1">
+        <h2>
+          {spec.title} <span>{spec.sub}</span>
+        </h2>
+        <p>{spec.p}</p>
       </div>
-    </div>
-  );
+    );
+  });
+
+  return <div className="hero-section-container">{carSpecs}</div>;
 }
 
 export default HeroSection;

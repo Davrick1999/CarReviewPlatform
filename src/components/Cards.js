@@ -9,7 +9,7 @@ import cardPic4 from "../assets/images/img-4.jpg";
 
 function Cards() {
   return (
-    <div className="cards">
+    <div className="cards" id="cards">
       <h1>Check out these cars</h1>
       <div className="cards__container">
         <div className="cards__wrapper">

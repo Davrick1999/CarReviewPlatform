@@ -1,6 +1,15 @@
 import React from "react";
 import "../../App.css";
+import PlainFooter from "../PlainFooter";
+import Showcase from "../Showcase";
 
-export default function SignUp() {
-  return <h1 className="sign-up">SIGN UP</h1>;
+function SignUp() {
+  return (
+    <>
+      <Showcase />
+      <PlainFooter />
+    </>
+  );
 }
+
+export default SignUp;
