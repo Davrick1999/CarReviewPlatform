@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
-  background-color: #333;
+  background-color: var(--mainColor);
 }
 
 h2 {
@@ -14,14 +14,25 @@ h2 {
   margin: 10px;
   font-family: "Roboto", sans-serif;
 }
+.compcards h2,
+.compcards h2 span {
+  font-size: 24px;
+  margin: 0;
+}
 h2 span {
-  font-family: "Roboto", sans-serif;
   font-size: 28px;
 }
+
 p {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
 }
+
+.compcards p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
 .hero-section-container > div {
   height: 150px;
   background-size: cover;
@@ -82,5 +93,16 @@ p {
   }
   .hero-section-container > div {
     grid-column: 1 / span 4;
+  }
+
+  .compcards h2,
+  .compcards h2 span {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .compcards p {
+    font-size: 12px;
+    font-weight: 300;
   }
 }

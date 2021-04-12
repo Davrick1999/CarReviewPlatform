@@ -18,13 +18,13 @@ function Cards() {
               src={cardPic9}
               text="Pick yourself one of the coolest supercars"
               label="Supercars"
-              path="/services"
+              path="/compare"
             />
             <CardItem
               src={cardPic8}
               text="When it comes to luxury, RR is the king"
               label="Luxury"
-              path="/services"
+              path="/compare"
             />
           </ul>
           <ul className="cards__items">

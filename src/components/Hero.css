@@ -12,16 +12,18 @@
 
 .hero-container > h1 {
   color: #fff;
+  font-family: var(--mainFont);
   font-size: 64px;
+  font-weight: 300;
   margin-top: -100px;
   animation: fadein 1s;
 }
 
 .hero-container > p {
   color: #fff;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: var(--mainFont);
   font-size: 28px;
+  font-weight: bold;
   margin-top: 8px;
   animation: fadein 1s;
 }
@@ -33,13 +35,6 @@
 
 .hero-btns .btn {
   margin: 6px;
-}
-
-@media screen and (max-width: 960px) {
-  .hero-container > h1 {
-    font-size: 70px;
-    margin-top: -150px;
-  }
 }
 
 @media screen and (max-width: 768px) {

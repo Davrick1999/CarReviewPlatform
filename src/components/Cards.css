@@ -11,6 +11,7 @@ h1 {
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: center;
   max-width: 1120px;
   width: 90%;
   margin: 0 auto;
@@ -30,6 +31,14 @@ h1 {
   flex: 1;
   margin: 0 1rem;
   border-radius: 10px;
+}
+
+.compcards .cards__item {
+  margin: 0 5rem;
+}
+
+.compcards .cards__item {
+  width: 35vw;
 }
 
 .cards__item__link {
@@ -65,7 +74,7 @@ h1 {
   font-size: 14px;
   font-weight: 600;
   color: #fff;
-  background-color: #347fc4;
+  background-color: var(--highlightColor);
   box-sizing: border-box;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -97,6 +106,11 @@ h1 {
 .cards__item__text {
   color: #333;
   font-size: 18px;
+  font-weight: 500;
+}
+
+.compcards .cards__item__text {
+  color: #eee;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -117,5 +131,22 @@ h1 {
   }
   .cards {
     padding: 3rem;
+  }
+  .compcards .cards__item {
+    margin: 0;
+    width: 45vw;
+  }
+
+  .compcards .cards__container {
+    width: 100%;
+  }
+
+  .compcards .cards__item {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .compcards .cards__item__info {
+    padding: 20px auto;
   }
 }

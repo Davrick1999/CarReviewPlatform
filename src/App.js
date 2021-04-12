@@ -5,6 +5,7 @@ import Home from "./components/pages/Home";
 import Services from "./components/pages/Services";
 import Products from "./components/pages/Products";
 import SignUp from "./components/pages/SignUp";
+import Comparison from "./components/pages/Comparison";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/services" component={Services} />
           <Route path="/products" component={Products} />
           <Route path="/sign-up" component={SignUp} />
+          <Route path="/compare" component={Comparison} />
         </Switch>
       </Router>
     </>

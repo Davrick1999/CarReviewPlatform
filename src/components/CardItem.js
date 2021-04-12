@@ -5,9 +5,9 @@ import "./Cards.css";
 function CardItem({ src, label, path, text }) {
   return (
     <>
-      <li className="cards__item">
-        <Link className="cards__item__link" to={path}>
-          <figure className="cards__item__pic-wrap" data-category={label}>
+      <li className="cards__item ">
+        <Link className="cards__item__link " to={path}>
+          <figure className="cards__item__pic-wrap " data-category={label}>
             <img src={src} alt="Cars 1" className="cards__item__img" />
           </figure>
           <div className="cards__item__info">

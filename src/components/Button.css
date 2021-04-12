@@ -1,15 +1,10 @@
-:root {
-  --primary: #eee;
-  --mainColor: #403f4c;
-}
-
 .btn {
   padding: 8px 20px;
   border-radius: 5px;
   outline: none;
   border: none;
   cursor: pointer;
-  font-family: "Lato", sans-serif;
+  font-family: var(--mainFont);
   font-weight: bold;
 }
 
@@ -24,6 +19,16 @@
   color: #fff;
   padding: 8px 20px;
   border: 1px solid var(--primary);
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
+}
+
+.btn-half-outline {
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 20px;
+  margin: 8px 0;
+  border-top: 1px solid var(--primary);
   border-radius: 5px;
   transition: all 0.3s ease-out;
 }
