@@ -7,22 +7,12 @@ import SpecItems from "./SpecItems";
 
 function CompCards() {
   return (
-    <div className="compcards">
+    <div className="compcards comparison">
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
-            <CardItem
-              src={cardPic9}
-              text={<SpecItems />}
-              label="Supercars"
-              path="/compare"
-            />
-            <CardItem
-              src={cardPic8}
-              text={<SpecItems />}
-              label="Luxury"
-              path="/compare"
-            />
+            <CardItem src={cardPic9} text={<SpecItems />} label="Supercar" />
+            <CardItem src={cardPic8} text={<SpecItems />} label="Supercar" />
           </ul>
         </div>
       </div>

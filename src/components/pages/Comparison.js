@@ -6,9 +6,7 @@ import Footer from "../Footer";
 function Comparison() {
   return (
     <>
-      <div className="comparison top">
-        <CompCards />
-      </div>
+      <CompCards />
       <Footer />
     </>
   );

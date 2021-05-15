@@ -22,50 +22,54 @@ body {
   background: #eee;
 }
 
-.home,
 .services,
 .products,
-.sign-up,
-.comparison {
+.comparison,
+.my-profile {
   display: flex;
   min-height: calc(100vh - 60px);
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  color: #fff;
 }
 
 .services {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 3rem;
+  background: url("assets/images/porsche-2.jpg") center/cover no-repeat;
+  min-height: calc((100vh - 60px) / 2);
+  flex-direction: column;
+}
+
+.services > h1 {
+  font-size: 2.25rem;
+}
+
+.services > p {
+  text-align: center;
+  font-weight: bold;
+  margin: 1rem 5rem;
 }
 
 .comparison {
   background: var(--mainColor);
-  color: #fff;
-  font-size: 3rem;
-}
-.products {
-  background: url("assets/images/img-1.jpg") center/cover no-repeat;
-  color: #fff;
   font-size: 3rem;
 }
 
-.sign-up {
-  background: url("assets/images/img-home.jpg") center/cover no-repeat;
-  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-  color: #fff;
+.my-profile {
+  background: url("assets/images/bg-2.jpg") center/cover no-repeat;
+  font-size: 1rem;
+}
+
+.products {
+  background: url("assets/images/img-1.jpg") center/cover no-repeat;
   font-size: 3rem;
 }
 
 .showcase {
   background: url("assets/images/img-home.jpg") center/cover no-repeat;
-  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  height: calc(100vh - 135px);
   color: #fff;
+  position: relative;
 }
 
 /* Utilities */
@@ -87,11 +91,14 @@ body {
   align-items: flex-start;
 }
 
+.z-index {
+  z-index: 1;
+}
+
 .card {
   background-color: #eee;
   color: #333;
   border-radius: 10px;
-  -webkit-box-shadow: 0 6px 20px rgba(64, 63, 76, 0.21);
   box-shadow: 0 6px 20px rgba(64, 63, 76, 0.21);
   padding: 20px;
   margin: 5px;
@@ -112,32 +119,26 @@ body {
 }
 
 .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: 100%;
 }
 
+.flex-cl {
+  flex-direction: column;
+}
+.grid .flex-cl > i {
+  margin-bottom: 16px;
+}
+
 .grid {
-  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: 100%;
 }
@@ -194,5 +195,20 @@ body {
 a {
   text-decoration: none;
   color: #333;
+  cursor: pointer;
 }
-/*# sourceMappingURL=App.css.map */
+
+/* Media Queries */
+
+@media screen and (max-width: 960px) {
+  .services > h1 {
+    font-size: 2rem;
+  }
+
+  .services > p {
+    text-align: left;
+
+    font-weight: bold;
+    margin: 1rem 2rem;
+  }
+}

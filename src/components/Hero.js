@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import "./Hero.css";
-import { AutoScroll } from "./AutoScroll";
+import { Button } from "./Button";
 
 function Hero() {
   return (
@@ -9,14 +9,14 @@ function Hero() {
       <h1>Car Review Platform</h1>
       <p>Review your favorite cars</p>
       <div className="hero-btns">
-        <AutoScroll
-          href="#cards"
+        <Button
+          to="/compare"
           className="btns"
           buttonStyle="btn-outline"
           buttonSize="btn-large"
         >
           GET STARTED
-        </AutoScroll>
+        </Button>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "./Button";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
 import "./Navbar.css";
 
 function Navbar() {
@@ -24,6 +25,10 @@ function Navbar() {
 
   window.addEventListener("resize", showButton);
 
+  const activeLink = {
+    borderBottom: "1px solid #ccc",
+  };
+
   return (
     <>
       <nav className="navbar" id="navbar">
@@ -36,42 +41,50 @@ function Navbar() {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+              <NavLink
+                activeStyle={!click && activeLink}
+                to="/"
+                className="nav-links"
+                onClick={closeMobileMenu}
+                exact
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
+              <NavLink
+                activeStyle={!click && activeLink}
                 to="/services"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
                 Services
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
-                to="/products"
+              <NavLink
+                activeStyle={!click && activeLink}
+                to="/compare"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Products
-              </Link>
+                Comparison
+              </NavLink>
             </li>
 
             <li>
-              <Link
+              <NavLink
                 to="/sign-up"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
-                Sign Up
-              </Link>
+                Login
+              </NavLink>
             </li>
           </ul>
           {button && (
-            <Button to="/sign-up" buttonStyle="btn-outline">
-              SIGN UP
+            <Button to="/my-profile" buttonStyle="btn-outline">
+              My Profile
             </Button>
           )}
         </div>
