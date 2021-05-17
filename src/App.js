@@ -8,6 +8,7 @@ import SignUp from "./components/pages/SignUp";
 import Comparison from "./components/pages/Comparison";
 import ScrollToTop from "./components/ScrollToTop";
 import MyProfile from "./components/pages/MyProfile";
+import Reviews from "./components/pages/Reviews";
 import { useState, useEffect } from "react";
 import { auth } from "./firebase";
 
@@ -42,6 +43,7 @@ function App() {
           <Route path="/sign-up" component={SignUp} />
           <Route path="/compare" component={Comparison} />
           <Route path="/my-profile" component={user ? MyProfile : SignUp} />
+          <Route path="/reviews" component={Reviews} />
         </Switch>
       </Router>
     </>

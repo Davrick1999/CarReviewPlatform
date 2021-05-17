@@ -146,7 +146,17 @@ h1 {
     margin: 0 5px;
   }
 
+  .compcards .cards__item__text {
+    padding: 8px 0;
+  }
+
   .compcards .cards__item__info {
-    padding: 20px auto;
+    padding: 20px 0;
+  }
+  .compcards .btn-half-outline > h2 {
+    font-size: 1.2rem;
+  }
+  .compcards .btn-half-outline {
+    padding: 8px 0;
   }
 }

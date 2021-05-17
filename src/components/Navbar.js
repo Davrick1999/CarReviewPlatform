@@ -74,11 +74,11 @@ function Navbar() {
 
             <li>
               <NavLink
-                to="/sign-up"
+                to="/my-profile"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
-                Login
+                My Profile
               </NavLink>
             </li>
           </ul>
