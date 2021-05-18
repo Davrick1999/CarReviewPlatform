@@ -64,11 +64,11 @@ function Navbar() {
             <li className="nav-item">
               <NavLink
                 activeStyle={!click && activeLink}
-                to="/compare"
+                to="/reviews"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Comparison
+                Reviews
               </NavLink>
             </li>
 

@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./Showcase.css";
-import { auth } from "../firebase";
+import { auth, storage, firestore } from "../firebase";
+import firebase from "firebase";
 
 function Showcase() {
   const [toggleForm, setToggleForm] = useState(true);
@@ -10,6 +11,13 @@ function Showcase() {
 
   const signUp = (e) => {
     e.preventDefault();
+
+    //upload
+    firestore.collection("users").add({
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      profileImageUrl: null,
+      email: emailRef.current.value,
+    });
 
     auth
       .createUserWithEmailAndPassword(
@@ -43,11 +51,12 @@ function Showcase() {
     <section class="showcase">
       <div class="container grid">
         <div class="showcase-text">
-          <h1>Easier Deployment</h1>
+          <h1>Car Reviews</h1>
           <p>
-            Deploy web apps of all kinds, from large scale enterprise APIs to
-            static websites for individuals. Fill out the form to try a demo of
-            our platform
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
+            rerum beatae ab consectetur ratione facere natus quos expedita nemo
+            consequuntur exercitationem porro perspiciatis provident, saepe,
+            nobis praesentium doloribus? Unde, eius!
           </p>
           <a href="/" class="btn btn-outline">
             Read More

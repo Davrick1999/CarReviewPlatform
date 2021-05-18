@@ -119,12 +119,29 @@ body {
 }
 
 .card-outline {
-  background: transparent;
+  background: rgba(1, 1, 1, 0.35);
   color: #fff;
-  border: 1px solid #959595;
+  border: 1px solid #888;
+  box-shadow: 0 10px 25px rgba(64, 63, 76, 0.71);
 }
 
-.card-filled {
+.my-profile .grid-2 .card-outline {
+  height: 125px;
+  padding: 0;
+}
+
+.reviews .card-outline {
+  padding: 8px 16px;
+}
+
+.profile-tabs > li {
+  cursor: pointer;
+}
+.profile-tabs .active {
+  color: #ff5c00;
+}
+
+.card-outline .card-filled {
   background-color: rgba(222, 222, 222, 1);
   color: #333;
   border: 1px solid #959595;
@@ -332,7 +349,7 @@ a {
     margin: 1rem 2rem;
   }
 
-  .grid-3 > div:nth-of-type(2) {
+  .grid-3-profile > div:nth-of-type(2) {
     grid-column: 1 / 2;
   }
 }

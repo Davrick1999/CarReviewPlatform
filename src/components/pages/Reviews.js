@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { auth, firestore, storage } from "../../firebase";
+import makeId from "../../functions/makeId";
 import AddAPhotoIcon from "@material-ui/icons/AddAPhoto";
 import firebase from "firebase";
 
@@ -12,18 +13,6 @@ function Reviews() {
   const [progress, setProgress] = useState(0);
 
   const [videos, setVideos] = useState([]);
-
-  const makeId = (length) => {
-    var result = "";
-    var characters =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdrfghijklmnopqrstuvwxyz0123456789";
-    var charactersLength = characters.length;
-
-    for (var i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
-  };
 
   const handleFileChange = (e) => {
     if (e.target.files[0]) {
@@ -72,6 +61,13 @@ function Reviews() {
                 username: user.email.replace("@gmail.com", ""),
               });
             });
+
+          //clear out the form
+          setTitle("");
+          setPrice("");
+          setCountry("");
+          setProgress(0);
+          setVideo(null);
         }
       );
     }
