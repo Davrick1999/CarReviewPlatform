@@ -178,7 +178,7 @@ function Reviews() {
             />
             <input
               type="submit"
-              value={`Upload ${progress != 0 ? progress : ""}`}
+              value={`Upload ${progress !== 0 ? progress : ""}`}
               onClick={handleUpload}
               class="btn btn-primary"
             />
